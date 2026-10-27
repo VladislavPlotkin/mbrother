@@ -56,7 +56,7 @@ Standalone window with video stream — no OS window frame, with toolbar, zoom, 
 `rc-agent` runs **only on the remote machine** — it captures its screen via X11.
 
 ```bash
-git clone https://github.com/user/remote-control.git
+git clone https://github.com/VladislavPlotkin/mbrother.git
 cd remote-control
 pip install -r requirements.txt
 ```
@@ -95,7 +95,7 @@ systemctl --user enable --now rc-agent
 `rc-panel` runs **only on the controlling PC** — it displays video and sends input. Agent is not needed here since there is no remote screen to capture.
 
 ```bash
-git clone https://github.com/user/remote-control.git
+git clone https://github.com/VladislavPlotkin/mbrother.git
 cd remote-control
 pip install -r requirements.txt
 ```

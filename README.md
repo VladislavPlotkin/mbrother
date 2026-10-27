@@ -2,7 +2,7 @@
 
 <p align="center"><img src="logo.png" alt="Младший брат — логотип" width="320"></p>
 
-[![CI](https://github.com/user/remote-control/actions/workflows/ci.yml/badge.svg)](https://github.com/user/remote-control/actions)
+[![CI](https://github.com/VladislavPlotkin/mbrother/actions/workflows/ci.yml/badge.svg)](https://github.com/VladislavPlotkin/mbrother/actions)
 ![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -56,7 +56,7 @@
 `rc-agent` запускается **только на удалённой машине** — он захватывает её экран через X11.
 
 ```bash
-git clone https://github.com/user/remote-control.git
+git clone https://github.com/VladislavPlotkin/mbrother.git
 cd remote-control
 pip install -r requirements.txt
 ```
@@ -95,7 +95,7 @@ systemctl --user enable --now rc-agent
 `rc-panel` запускается **только на управляющем ПК** — он показывает видео и отправляет ввод. Агент на этой машине не нужен, там нет удалённого экрана.
 
 ```bash
-git clone https://github.com/user/remote-control.git
+git clone https://github.com/VladislavPlotkin/mbrother.git
 cd remote-control
 pip install -r requirements.txt
 ```
