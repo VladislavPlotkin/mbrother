@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rc — панель управления</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/xterm.css">
+</head>
+<body>
+
+<!-- ═══ METRICS BAR ═══ -->
+<div id="metrics-bar" class="metrics-bar">
+  <div class="metric-item" title="загрузка CPU">
+    <span class="label">CPU</span>
+    <span class="value" id="m-cpu">—</span>
+  </div>
+  <div class="metric-item" title="память">
+    <span class="label">RAM</span>
+    <span class="value" id="m-mem">—</span>
+  </div>
+  <div class="metric-item" title="диск" id="m-disk-container">
+    <span class="label">Диск</span>
+    <span class="value" id="m-disk">—</span>
+  </div>
+  <div class="metric-item" title="температуры" id="m-temp-container">
+    <span class="label">Темп</span>
+    <span class="value" id="m-temp">—</span>
+  </div>
+  <div class="metric-item" title="время работы">
+    <span class="label">Uptime</span>
+    <span class="value" id="m-uptime">—</span>
+  </div>
+  <div class="grow"></div>
+  <div id="status" class="pill muted">подключение…</div>
+</div>
+
+<!-- ═══ TOOLBAR ═══ -->
+<header>
+  <div class="toolbar-group">
+    <button id="btn-wake" class="primary" title="Включить ПК (WoL)">⏻ Вкл</button>
+    <button id="btn-reboot" title="Перезагрузить">↻</button>
+    <button id="btn-off" class="danger" title="Выключить">⏻</button>
+  </div>
+  <div class="toolbar-group" id="app-launchers"></div>
+  <div class="toolbar-group">
+    <button id="btn-viewer" title="Отдельное окно">🖥 Окно</button>
+  </div>
+  <div class="grow"></div>
+  <button id="btn-refresh" title="Обновить всё">↻</button>
+  <button id="btn-hide" title="Скрыть/показать панель (F11)">☰</button>
+</header>
+
+<!-- ═══ MAIN LAYOUT ═══ -->
+<main>
+  <!-- Left: Windows list -->
+  <section class="card" id="windows-section">
+    <h2>Окна на удалённом ПК</h2>
+    <div class="tablewrap">
+      <table id="windows">
+        <thead><tr>
+          <th>Заголовок</th><th>Класс</th><th>PID</th><th>Размер</th><th>Действия</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Right: Terminal + Clipboard -->
+  <section class="card" id="terminal-section">
+    <div class="row">
+      <h2>Терминал</h2>
+      <button class="small" id="term-connect">подключить</button>
+      <span id="term-status" class="muted small"></span>
+    </div>
+    <div id="terminal" class="terminal" tabindex="0"></div>
+  </section>
+
+  <section class="card" id="clipboard-section">
+    <h2>Буфер обмена</h2>
+    <textarea id="clip" rows="8" placeholder="Текст буфера обмена удалённого ПК"></textarea>
+    <div class="row wrap">
+      <button id="btn-clip-get">Взять →</button>
+      <button id="btn-clip-set">← Положить</button>
+      <button id="btn-clip-copy">Копировать сюда</button>
+    </div>
+  </section>
+</main>
+
+<!-- ═══ TOAST ═══ -->
+<div id="toast" class="toast"></div>
+
+<script src="/static/xterm.js"></script>
+<script src="/static/xterm-fit.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

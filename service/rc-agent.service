@@ -1,0 +1,17 @@
+[Unit]
+Description=rc remote control agent (target side)
+After=graphical.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Environment=PYTHONPATH=REPO_DIR
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -m rc.agent --config %h/.config/rc/agent.json
+Restart=always
+RestartSec=5
+KillMode=process
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

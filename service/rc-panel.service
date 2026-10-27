@@ -1,0 +1,13 @@
+[Unit]
+Description=rc control panel (controller side)
+After=graphical-session.target
+
+[Service]
+Type=simple
+Environment=PYTHONPATH=REPO_DIR
+ExecStart=/usr/bin/python3 -m rc.client --port 8099 --bind 0.0.0.0
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
