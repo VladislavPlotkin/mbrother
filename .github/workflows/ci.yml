@@ -23,4 +23,4 @@ jobs:
           python -m py_compile rc/client/*.py rc/agent/*.py rc/__main__.py
       - name: Basic import check
         run: |
-          cd rc && python -c "from client import viewer, app; from agent import server"
+          python -c "from rc.client import viewer, app; from rc.agent import server"
