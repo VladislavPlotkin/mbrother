@@ -1,10 +1,10 @@
 # Remote Control Tool
 
-<p align="center"><img src="logo.png" alt="Mladshiy Brat — logo" width="320"></p>
-
-[![CI](https://github.com/user/remote-control/actions/workflows/ci.yml/badge.svg)](https://github.com/user/remote-control/actions)
+[![CI](https://github.com/VladislavPlotkin/mbrother/actions/workflows/ci.yml/badge.svg)](https://github.com/VladislavPlotkin/mbrother/actions)
 ![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
+
+<p align="center"><img src="logo.png" alt="Mladshiy Brat — logo" width="320"></p>
 
 [Русская версия](README.md)
 
