@@ -13,16 +13,12 @@ ENV/
 # OS files
 .DS_Store
 Thumbs.db
-
 # Local settings / IDE
 .idea/
 .vscode/
 *.swp
 *.swo
 
-# ComfyUI / AI stuff
-/home/qq/ssd/ComfyUI/output/*
-/home/qq/ssd/ComfyUI/user/comfyui.db
 *.log
 *.tmp
 
